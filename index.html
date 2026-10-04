@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Paceline — Wear stories that matter</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paceline — Wear stories that matter</title>
     <meta
       name="description"
       content="Thoughtfully crafted running gear for a better tomorrow. Natural, sustainable, timeless."
@@ -14,13 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-     <a class="skip-link" href="#main">Skip to content</a>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-     <!--------------------------------- svg -------------------------------------->
-      <!-- Icon sprite -->
+    <!--------------------------------- svg -------------------------------------->
+    <!-- Icon sprite -->
     <svg
       width="0"
       height="0"
@@ -97,9 +98,8 @@
         />
       </symbol>
     </svg>
-    
 
-     <header class="site-header">
+    <header class="site-header">
       <div class="container site-header__inner">
         <a class="logo" href="index.html" aria-label="Paceline — home"
           ><span class="logo__mark" aria-hidden="true"></span>Paceline</a
@@ -141,6 +141,30 @@
       </div>
     </header>
 
+    <div class="mobile-nav" id="mobile-nav" inert>
+      <nav aria-label="Mobile">
+        <ul>
+          <li>
+            <a href="index.html">Home <span aria-hidden="true">→</span></a>
+          </li>
+          <li>
+            <a href="about.html">About <span aria-hidden="true">→</span></a>
+          </li>
+          <li>
+            <a href="#arrivals">Shop <span aria-hidden="true">→</span></a>
+          </li>
+          <li>
+            <a href="#story">Story <span aria-hidden="true">→</span></a>
+          </li>
+          <li>
+            <a href="#contact">Contact <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+      </nav>
+      <p class="mobile-nav__foot">Free delivery over ₹5,000 · 30-day returns</p>
+    </div>
+
     <script src="script/script.js"></script>
-</body>
+    <script src="script/navigation.js"></script>
+  </body>
 </html>

@@ -1,0 +1,7 @@
+/* Header collapses to the mobile pattern a little earlier than phones */
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .site-header__inner { grid-template-columns: 1fr auto; }
+  .menu-toggle { display: grid; place-items: center; }
+  .header-actions { gap: 0; }
+}
