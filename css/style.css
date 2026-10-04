@@ -8,6 +8,7 @@ box-sizing:border-box;
 :root {
   /* Palette */
   --color-background: #f5f0e6;
+  --orange: #ff7c3f;
   /* warm ivory */
   --color-surface: #fbf8f2;
   /* off-white */
@@ -172,6 +173,7 @@ h3 {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
 .section {
@@ -321,6 +323,9 @@ h3 {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 150px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
 }
 
 .logo {
@@ -608,3 +613,99 @@ body.menu-open {
   }
 }
 /******************* hero section css ends here ****************/
+/******************* shop by category section css starts here ****************/
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px, 1.6vw, 24px);
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--color-sand);
+  border-radius: var(--radius-sm);
+  color: var(--color-on-dark);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20, 24, 20, 0.62), rgba(20, 24, 20, 0.04) 55%);
+  transition: background var(--transition-smooth);
+}
+
+.category-card:hover img,
+.category-card:focus-visible img {
+  transform: scale(1.05);
+}
+
+.category-card:hover::after,
+.category-card:focus-visible::after {
+  background: linear-gradient(0deg, rgba(20, 38, 30, 0.74), rgba(20, 24, 20, 0.1) 60%);
+}
+
+.category-card__body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.category-card__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.category-card__note {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--color-on-dark-muted);
+}
+
+.circle-arrow {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(245, 240, 230, 0.7);
+  border-radius: 50%;
+  transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.category-card:hover .circle-arrow,
+.category-card:focus-visible .circle-arrow {
+  transform: translateX(4px);
+  background: var(--color-on-dark);
+  color: var(--color-primary);
+}
+
+.category_lead{
+  color: var(--orange);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.2ch;
+}
+
+/******************* shop by category section css ends here ****************/
