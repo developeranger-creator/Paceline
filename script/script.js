@@ -56,3 +56,38 @@
     window.addEventListener('resize', build);
     build();
   }
+
+
+  // Number Animations
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const id = entry.target.id;
+
+            if (id === "years") {
+                new countUp.CountUp(id, 10).start();
+            }
+
+            if (id === "makers") {
+                new countUp.CountUp(id, 40).start();
+            }
+
+            if (id === "stores") {
+                new countUp.CountUp(id, 1).start();
+            }
+
+            observer.unobserve(entry.target);
+        }
+
+    });
+
+});
+
+counters.forEach(counter => {
+    observer.observe(counter);
+});
