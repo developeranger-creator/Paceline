@@ -1140,6 +1140,10 @@ body.menu-open {
   max-width: 30ch;
 }
 
+.val_num_about{
+  font-size: 2rem;
+}
+
 .site-footer {
   background: #1b1b19;
   color: var(--color-on-dark);
@@ -1284,3 +1288,129 @@ body.menu-open {
 }
 
 /******************* footer section ends here ****************/
+
+
+
+
+
+
+
+/******************* about section css code starts here**********/
+ .about-hero {
+  padding-top: clamp(48px, 7vw, 104px);
+  text-align: center;
+}
+
+.crumbs {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 32px;
+}
+
+.about-hero__title {
+  font-size: clamp(3.6rem, 11vw, 10rem);
+  font-weight: 500;
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.about-hero__title em {
+  font-style: italic;
+  text-transform: none;
+  color: var(--color-primary);
+}
+
+.about-hero__text {
+  max-width: 52ch;
+  margin: 28px auto 0;
+  font-size: clamp(1.02rem, 1.4vw, 1.25rem);
+  color: var(--color-muted);
+}
+
+.about-hero__media {
+  margin-top: clamp(40px, 6vw, 80px);
+  overflow: hidden;
+  aspect-ratio: 2.6 / 1;
+  background: var(--color-sand);
+}
+
+.about-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 62%;
+  animation: heroIn 1800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* about story css starts here */
+.about-story {
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+  gap: clamp(32px, 6vw, 112px);
+}
+
+.about-story__label {
+  position: sticky;
+  top: calc(var(--header-h) + 32px);
+  align-self: start;
+}
+
+.about-story__label h2 {
+  font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+  margin-top: 16px;
+}
+
+.about-story__content {
+  display: grid;
+  gap: clamp(28px, 4vw, 64px);
+  align-items: start;
+}
+
+.about-story__text p {
+  color: var(--color-muted);
+  margin-bottom: 20px;
+  max-width: 48ch;
+}
+
+.about-story__text .lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+  line-height: 1.25;
+  color: var(--color-text);
+  max-width: 22ch;
+  margin-bottom: 28px;
+}
+
+.about-story__text .link-arrow {
+  margin-top: 12px;
+  font-weight: 800;
+}
+
+.about-story__figure {
+  margin-top: clamp(40px, 8vw, 120px);
+}
+
+.about-story__figure img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 55%;
+  border-radius: var(--radius-sm);
+}
+
+.about-story__figure figcaption {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* about story css ends here */
+/* won't compromise css starts here */
+
+/* won't compromise css ends here */
