@@ -1411,6 +1411,42 @@ body.menu-open {
 }
 
 /* about story css ends here */
-/* won't compromise css starts here */
+/* timeline css starts here */
+.timeline_container{
+  padding: 4rem 0rem;
+}
+.timeline {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: clamp(40px, 5vw, 72px);
+}
 
-/* won't compromise css ends here */
+.timeline li {
+  padding-top: 18px;
+  border-top: 1px solid var(--color-text);
+}
+
+.timeline__year {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 2.6vw, 2.6rem);
+  color: var(--color-primary);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.timeline strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.timeline span:last-child {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  display: block;
+}
+/* timeline css ends here */
