@@ -1,13 +1,338 @@
 /* Header collapses to the mobile pattern a little earlier than phones */
 @media (max-width: 960px) {
-  .primary-nav { display: none; }
-  .site-header__inner { grid-template-columns: 1fr auto; }
-  .menu-toggle { display: grid; place-items: center; }
-  .header-actions { gap: 0; }
-  .top_strip{
-    display: none;
-  }
-  .mobile-nav{
-    padding: 0 1rem;
-  }
+    .primary-nav {
+        display: none;
+    }
+
+    .site-header__inner {
+        grid-template-columns: 1fr auto;
+        padding: 0 1rem;
+        gap: 4rem;
+    }
+
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+    }
+
+    .header-actions {
+        gap: 0;
+    }
+
+    .top_strip {
+        display: none;
+    }
+
+    .mobile-nav {
+        padding: 0 1rem;
+    }
+}
+
+
+/* ---------- Tablet & small laptop ---------- */
+@media (max-width: 1199px) {
+    :root {
+        --header-h: 68px;
+        --section-space: clamp(64px, 9vw, 112px);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-card {
+        aspect-ratio: 4 / 3.6;
+    }
+
+    .category-card img {
+        object-position: 50% 40%;
+    }
+
+    .carousel__track {
+        grid-auto-columns: calc((100% - 2 * var(--gap)) / 3);
+    }
+
+    .story {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+    }
+
+    .story__body {
+        padding-block: 64px;
+    }
+
+    .collection-card {
+        aspect-ratio: 4 / 5;
+    }
+
+    .values-strip__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 24px;
+    }
+
+    .footer__cols {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer__brand {
+        grid-column: 1 / -1;
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+    }
+
+    .about-story__label {
+        position: static;
+    }
+
+    .about-story__label h2 br {
+        display: none;
+    }
+
+    .about-hero__media {
+        aspect-ratio: 2.2 / 1;
+    }
+
+    .values__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value,
+    .value+.value {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        column-gap: 20px;
+        padding: 28px 0;
+        border-left: 0;
+    }
+
+    .value+.value {
+        border-top: 1px solid rgba(245, 240, 230, 0.2);
+    }
+
+    .value .icon {
+        grid-row: 1 / span 3;
+        margin: 0;
+    }
+
+    .value p {
+        max-width: 52ch;
+    }
+
+    .visit {
+        grid-template-columns: 1fr;
+    }
+
+    .visit__body {
+        max-width: none;
+    }
+
+    .visit__map {
+        min-height: 400px;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+    :root {
+        --header-h: 60px;
+        --gutter: 20px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+        letter-spacing: 0.16em;
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .section-head .carousel-controls {
+        display: none;
+    }
+
+    /* Hero: re-crop to keep the runner in frame, anchor copy to the bottom */
+    .hero {
+        min-height: calc(100svh - var(--header-h));
+        min-height: min(calc(100svh - var(--header-h)), 720px);
+    }
+
+    .hero__media img {
+        object-position: 76% 50%;
+    }
+
+    .hero::after {
+        background: linear-gradient(0deg, rgba(20, 28, 22, 0.82) 0%, rgba(20, 28, 22, 0.35) 50%, rgba(20, 28, 22, 0.05) 100%);
+    }
+
+    .hero__content {
+
+        padding-block: 40px 48px;
+    }
+
+    .hero__title {
+        font-size: clamp(2.6rem, 13vw, 3.8rem);
+    }
+
+    .hero .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Categories: 2-up grid with taller crops */
+    .category-grid {
+        gap: 10px;
+    }
+
+    .category-card {
+        aspect-ratio: 3 / 4.2;
+    }
+
+    .category-card__body {
+        padding: 14px;
+    }
+
+    .category-card__name {
+        font-size: 1.3rem;
+    }
+
+    .category-card__note {
+        display: none;
+    }
+
+    .circle-arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    /* Products: peeking horizontal scroller */
+    .carousel__track {
+        grid-auto-columns: 64%;
+        margin-right: calc(var(--gutter) * -1);
+        padding-right: var(--gutter);
+    }
+
+    .product-card__info {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .carousel__dots {
+        margin-top: 20px;
+    }
+
+    /* Story: image first, full-bleed, copy below */
+    .story {
+        grid-template-columns: 1fr;
+    }
+
+    .story__media {
+        min-height: 0;
+        aspect-ratio: 4 / 4.4;
+    }
+
+    .story__body {
+        padding: 40px var(--gutter) 0;
+        max-width: none;
+    }
+
+    .story__caption {
+        margin-top: 36px;
+        gap: 5rem;
+    }
+
+    .story__body .link-arrow {
+        margin: 3rem 0 2rem 0;
+        border: 1.5px solid var(--color-beige);
+        color: var(--color-surface);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.5rem 1rem;
+    }
+
+    .story_number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Collections: stacked, shorter */
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .collection-card {
+        aspect-ratio: 4 / 4.6;
+    }
+
+    .collection-card img {
+        object-position: 50% 30%;
+    }
+
+    .values-strip__list {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+    }
+
+    .values-strip__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.72rem;
+    }
+
+    /* Footer */
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer__cols {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 20px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+}
+
+@media (max-width: 380px) {
+    :root {
+        --header-h: 60px;
+        --gutter: 13px;
+    }
+
+    .footer__cols {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel__track {
+        grid-auto-columns: 72%;
+    }
+
+    .story__media {
+        position: relative;
+        overflow: hidden;
+        /* min-height: clamp(460px, 56vw, 560px); */
+        max-height: fit-content;
+        background: var(--color-sand);
+    }
+        .story__caption {
+        margin-top: 36px;
+        gap: 4rem;
+    }
 }

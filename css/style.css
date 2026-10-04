@@ -322,7 +322,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 150px;
+  gap: 9.5rem;
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
@@ -599,6 +599,7 @@ body.menu-open {
 
 .hero__content .btn--light{
   margin-right: 1rem;
+     margin-bottom: 1rem;
 }
 
 @keyframes fadeUp {
@@ -917,7 +918,7 @@ body.menu-open {
   position: relative;
   overflow: hidden;
   /* min-height: clamp(460px, 56vw, 560px); */
-  max-height: 80vh;
+  /* max-height: 80vh; */
   background: var(--color-sand);
 }
 
@@ -934,7 +935,7 @@ body.menu-open {
   padding: clamp(56px, 3vw, 120px) 0px clamp(56px, 3vw, 120px) var(--gutter);
   max-width: 100%;
   background-color: #171614;
-  max-height: 80vh;
+  max-height: fit-content;
 }
 
 .story__title {
@@ -995,6 +996,7 @@ body.menu-open {
   color: var(--color-primary-soft);
   font-weight: 900;
 }
+
 /******************* our story section css ends here ****************/
 /******************* collections section starts here ****************/
 .collection-grid {
