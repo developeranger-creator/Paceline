@@ -4,4 +4,10 @@
   .site-header__inner { grid-template-columns: 1fr auto; }
   .menu-toggle { display: grid; place-items: center; }
   .header-actions { gap: 0; }
+  .top_strip{
+    display: none;
+  }
+  .mobile-nav{
+    padding: 0 1rem;
+  }
 }
