@@ -30,8 +30,8 @@
   --pure-dark: #000;
   --color-footer: #1b1b19;
   /* Type */
-  --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* Shape — kept restrained, nothing cartoonish */
   --radius-sm: 2px;
@@ -142,9 +142,9 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.04;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 
@@ -215,7 +215,7 @@ h3 {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-primary-soft);
 }
@@ -253,7 +253,7 @@ h3 {
   padding: 0 28px;
   font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   border: 1px solid currentColor;
   border-radius: var(--radius-sm);
@@ -308,7 +308,7 @@ h3 {
   gap: 10px;
   font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding-bottom: 6px;
   border-bottom: 1px solid currentColor;
@@ -367,7 +367,7 @@ h3 {
   font-family: var(--font-display);
   font-size: 1.7rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   line-height: 1;
   display: inline-flex;
@@ -393,7 +393,7 @@ h3 {
   padding: 8px 0;
   font-size: 0.82rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -544,6 +544,72 @@ body.menu-open {
 }
 
 
+.section-head .section-title {
+  position: relative;
+}
+
+.section-head .section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 48px;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-head.is-visible .section-title::after {
+  transform: scaleX(1);
+}
+
+.js .carousel__track.reveal .product-card {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js .carousel__track.reveal.is-visible .product-card {
+  opacity: 1;
+  transform: none;
+}
+
+.carousel__track.reveal .product-card:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+.carousel__track.reveal .product-card:nth-child(3) {
+  transition-delay: 160ms;
+}
+
+.carousel__track.reveal .product-card:nth-child(4) {
+  transition-delay: 240ms;
+}
+
+.carousel__track.reveal .product-card:nth-child(5) {
+  transition-delay: 320ms;
+}
+
+.carousel__track.reveal .product-card:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+.carousel__track.reveal .product-card:nth-child(7) {
+  transition-delay: 480ms;
+}
+
+.carousel__track.reveal .product-card:nth-child(8) {
+  transition-delay: 560ms;
+}
+
+.carousel__track.reveal .product-card:nth-child(9) {
+  transition-delay: 640ms;
+}
+
+
+
 /******************* hero section css starts here ****************/
 /* ---------- Hero (home) ---------- */
 .hero {
@@ -565,6 +631,12 @@ body.menu-open {
   position: absolute;
   inset: 0;
   z-index: -2;
+}
+
+.hero__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero__media img {
@@ -604,11 +676,11 @@ body.menu-open {
 
 .hero__title {
   font-size: clamp(3rem, 7.4vw, 7rem);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 0.98;
   margin: 20px 0 24px;
   text-transform: uppercase;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.02em;
 }
 
 .hero__text {
@@ -741,10 +813,10 @@ body.menu-open {
 
 .category_lead {
   color: var(--orange);
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
-  letter-spacing: 0.2ch;
+  letter-spacing: 0.1em;
 }
 
 /******************* shop by category section css ends here ****************/
@@ -840,7 +912,7 @@ body.menu-open {
   padding: 4px 10px;
   font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   background: var(--color-surface);
   color: var(--color-text);
@@ -963,7 +1035,7 @@ body.menu-open {
 }
 
 .story__media img {
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   width: 100%;
   height: 100%;
@@ -972,7 +1044,7 @@ body.menu-open {
 }
 
 .story__body {
-  padding: clamp(56px, 3vw, 120px) 0px clamp(56px, 3vw, 120px) var(--gutter);
+  padding: clamp(56px, 3vw, 120px) clamp(56px, 3vw, 120px) var(--gutter);
   max-width: 100%;
   background-color: #171614;
   max-height: fit-content;
@@ -982,7 +1054,7 @@ body.menu-open {
   font-size: clamp(2.4rem, 4.6vw, 4.4rem);
   margin: 18px 0 28px;
   color: #fff;
-  font-size: 4rem;
+  /* font-size: 4rem; */
 }
 
 .story__title em {
@@ -1009,7 +1081,7 @@ body.menu-open {
   padding-top: 18px;
   border-top: 1px solid var(--color-line);
   font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-muted);
   display: flex;
@@ -1035,7 +1107,7 @@ body.menu-open {
 
 .story__body .eyebrow {
   color: var(--color-primary-soft);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /******************* our story section css ends here ****************/
@@ -1292,7 +1364,7 @@ body.menu-open {
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-on-dark-muted);
   margin-bottom: 20px;
@@ -1348,7 +1420,7 @@ body.menu-open {
 
 .crumbs {
   font-size: 0.72rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-muted);
   margin-bottom: 32px;
@@ -1356,7 +1428,7 @@ body.menu-open {
 
 .about-hero__title {
   font-size: clamp(3.6rem, 11vw, 10rem);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 0.9;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -1470,9 +1542,28 @@ body.menu-open {
 }
 
 .timeline li {
+  position: relative;
   padding-top: 18px;
   border-top: 1px solid var(--color-text);
 }
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline li.is-visible::before {
+  transform: scaleX(1);
+}
+
 
 .timeline__year {
   font-family: var(--font-display);
@@ -1481,6 +1572,12 @@ body.menu-open {
   line-height: 1;
   display: block;
   margin-bottom: 10px;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.timeline li:hover .timeline__year {
+  color: var(--orange);
+  transform: translateX(5px);
 }
 
 .timeline strong {
@@ -1572,7 +1669,7 @@ body.menu-open {
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-on-dark-muted);
   margin-bottom: 8px;
@@ -1682,7 +1779,7 @@ body.menu-open {
   display: block;
   margin-top: 28px;
   font-size: 0.74rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-secondary);
 }
@@ -1728,8 +1825,12 @@ body.menu-open {
 
 /*dark theme code starts here*/
 .theme-icon {
-    font-size: 20px;
-    line-height: 1;
+    /* font-size: 20px;
+    line-height: 1; */
+      display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .theme-icon--moon {
@@ -1741,7 +1842,10 @@ html[data-theme="dark"] .theme-icon--sun {
 }
 
 html[data-theme="dark"] .theme-icon--moon {
-    display: inline-block;
+    /* display: inline-block;
+     */
+       display: block;
+  filter: brightness(0) invert(1);
 }
 
 .theme-toggle {
@@ -1772,4 +1876,30 @@ body,
         background-color 400ms ease,
         color 400ms ease,
         border-color 400ms ease;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .section-head .section-title::after,
+  .timeline li::before {
+    transform: scaleX(1);
+  }
+
+  .js .carousel__track.reveal .product-card {
+    opacity: 1;
+    transform: none;
+  }
 }

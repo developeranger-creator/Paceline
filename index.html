@@ -15,9 +15,12 @@
       rel="stylesheet"
     />
     <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+    <!-- <link
   href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
   rel="stylesheet"
-/>
+/> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
@@ -166,8 +169,10 @@
     aria-label="Switch to dark theme"
     aria-pressed="false"
 >
-    <i class="ri-sun-line theme-icon theme-icon--sun"></i>
-    <i class="ri-moon-line theme-icon theme-icon--moon"></i>
+    <!-- <i class="ri-sun-line theme-icon theme-icon--sun"></i>
+    <i class="ri-moon-line theme-icon theme-icon--moon"></i> -->
+       <img class="theme-icon theme-icon--sun" src="src/svg/sun-line.svg" alt="" aria-hidden="true" />
+    <img class="theme-icon theme-icon--moon" src="src/svg/moon-line.svg" alt="" aria-hidden="true" />
 </button>
           <button
             class="icon-btn menu-toggle"
@@ -222,8 +227,14 @@
     <!------------Hero section starts here------------------------------->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__media">
+           <picture>
+          <source
+            srcset="src/Home/hero_section/image-mobile.jpg"
+            media="(max-width: 767px)"
+            type="image/jpeg"
+          />
         <img
-          src="src/Home/hero_section/image1.png"
+          src="src/Home/hero_section/image1.webp"
           width="1440"
           height="720"
           alt="A runner checking his watch while striding across pale desert hills under a blue sky"
@@ -268,7 +279,7 @@
           <li class="reveal" style="--delay: 0ms">
             <a class="category-card" href="#arrivals">
               <img
-                src="src/Home/category_section/image1.png"
+                src="src/Home/category_section/image1.webp"
                 width="313"
                 height="420"
                 loading="lazy"
@@ -289,7 +300,7 @@
           <li class="reveal" style="--delay: 90ms">
             <a class="category-card" href="#arrivals">
               <img
-                src="src/Home/category_section/image2.png"
+                src="src/Home/category_section/image2.webp"
                 width="313"
                 height="420"
                 loading="lazy"
@@ -310,7 +321,7 @@
           <li class="reveal" style="--delay: 180ms">
             <a class="category-card" href="#arrivals">
               <img
-                src="src/Home/category_section/image3.png"
+                src="src/Home/category_section/image3.webp"
                 width="313"
                 height="420"
                 loading="lazy"
@@ -331,7 +342,7 @@
           <li class="reveal" style="--delay: 270ms">
             <a class="category-card" href="#arrivals">
               <img
-                src="src/Home/category_section/image4.png"
+                src="src/Home/category_section/image4.webp"
                 width="313"
                 height="420"
                 loading="lazy"
@@ -392,7 +403,7 @@
             <div class="product-card__media">
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -424,7 +435,7 @@
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
                   class="flip"
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -456,7 +467,7 @@
             <div class="product-card__media">
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -489,7 +500,7 @@
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
                   class="flip"
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -523,7 +534,7 @@
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
                   class="flip"
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -556,7 +567,7 @@
             <div class="product-card__media">
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -590,7 +601,7 @@
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
                   class="flip"
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -623,7 +634,7 @@
             <div class="product-card__media">
               <a href="#" tabindex="-1" aria-hidden="true"
                 ><img
-                  src="src/Home/arrivals_section/image.png"
+                  src="src/Home/arrivals_section/image.webp"
                   width="313"
                   height="340"
                   loading="lazy"
@@ -665,7 +676,7 @@
     <section class="story" id="story" aria-labelledby="story-title">
       <div class="story__media reveal">
         <img
-          src="src/Home/story_section/image.png"
+          src="src/Home/story_section/image.webp"
           width="720"
           height="320"
           loading="lazy"
@@ -726,7 +737,7 @@
         <div class="collection-grid">
           <a class="collection-card reveal" href="#arrivals">
             <img
-              src="src/Home/explore_section/image_male.png"
+              src="src/Home/explore_section/image_male.webp"
               width="643"
               height="480"
               loading="lazy"
@@ -746,7 +757,7 @@
             href="#arrivals"
           >
             <img
-              src="src/Home/explore_section/image_female.png"
+              src="src/Home/explore_section/image_female.webp"
               width="644"
               height="480"
               loading="lazy"

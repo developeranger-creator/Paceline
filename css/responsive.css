@@ -144,7 +144,7 @@
 
     .logo {
         font-size: 1.4rem;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.12em;
     }
 
     .section-head {
@@ -164,7 +164,7 @@
     }
 
     .hero__media img {
-        object-position: 76% 50%;
+        object-position: 66% 50%;
     }
 
     .hero::after {
